@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MythoDex Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #adminPanel {
+      display: none;
+      margin-top: 2rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p id="welcomeMessage" class="welcome-message"></p>
+
+  <header>
+    <h1>MythoDex Dashboard</h1>
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Search mythical creatures..." />
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SEARCH RESULTS -->
+    <section id="searchResults">
+      <h2>Search Results</h2>
+      <ul id="resultsList"></ul>
+    </section>
+
+    <!-- MY CREATURES SECTION -->
+    <section id="myCreatures">
+      <h2>My Creatures</h2>
+      <div class="creature-buttons">
+        <button id="listCreaturesBtn">List My Creatures</button>
+        <!--<button id="addCreatureBtn">Add Creature</button>-->
+        <!--<button id="removeCreatureBtn">Remove Creature</button>-->
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+      <ul id="myCreaturesList"></ul>
+    </section>
+
+    <!-- ADMIN PANEL SECTION -->
+    <section id="adminPanel">
+      <h2>ADMIN PANEL</h2>
+      <div>
+        <button id="viewUsersBtn">View Users</button>
+        <button id="viewLogsBtn">View Logs</button>
+        <button id="manageCreaturesBtn">Manage Creatures</button>
+      </div>
+
+      <div id="adminContent">
+        <!-- Admin content (tables, forms, logs) will be injected here by JS -->
+      </div>
+    </section> 
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

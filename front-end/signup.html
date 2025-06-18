@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="signup.css" />
+  <title>Signup - MythoDex</title>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Create an Account</h1>
+    <form id="signup-form" novalidate>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <div id="password-requirements">
+        <p>Password must contain:</p>
+        <ul>
+          <li id="length" class="invalid">At least 8 characters</li>
+          <li id="lowercase" class="invalid">At least one lowercase letter</li>
+          <li id="uppercase" class="invalid">At least one uppercase letter</li>
+          <li id="number" class="invalid">At least one number</li>
+          <li id="special" class="invalid">At least one special character (!@#$%^&*)</li>
+        </ul>
+      </div>
+
+      <label for="repeat-password">Repeat Password:</label>
+      <input type="password" id="repeat-password" name="repeat-password" required />
+
+      <div class="show-password-container">
+        <input type="checkbox" id="show-password" />
+        <label for="show-password">Show Password</label>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <div id="form-message" class="form-message"></div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

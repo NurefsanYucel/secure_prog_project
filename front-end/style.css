@@ -1,0 +1,234 @@
+body {
+
+    font-family: Roboto, sans-serif;
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;    
+}
+
+.section {
+    flex: 1; /* Distribute space evenly */
+    width: 100%;
+    height: 100%; /* Ensure each section takes full height */
+}
+
+.header {
+    color: #f9faf8;
+    background-color: #1f2937;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+.search-bar input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 350px;
+    transition: border 0.3s;
+  }
+  
+.search-bar input:focus {
+    border-color: #3882f6;
+    outline: none;
+  }
+  
+.search-bar button {
+    padding: 8px 16px;
+    width: 90px;
+    background-color: #3882f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+.search-bar button:hover {
+    background-color: #3882f6;
+  }
+
+.container2 {
+    color: #e5e7eb;
+    font-weight: lighter;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #1f2937;
+    padding: 30px 170px;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px 170px;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 30px 170px;
+}
+
+.content3 {
+    background-color: white;
+    padding: 90px 170px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.credits {
+    font-size: 0.8rem;
+    list-style: none;
+    padding: 0;
+  }
+  .credits li {
+    margin-bottom: 4px;
+  }
+
+.modal {
+    background-color: #3882f6;
+    border-radius: 6px;
+    text-align:left;
+    width: 700px;
+    height: 80px;
+    padding: 30px 100px 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-text {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.text2 {
+    color: white;
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.quote {
+    text-align: start;
+    width: 850px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.thor {
+    width: 800px;
+    text-align: end;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.images {
+    display: flex;
+}
+
+
+h1 {
+    color: #f9faf8;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #e5e7eb; /* changes the color of the links */
+    text-decoration: none; /* removes underline from links */
+}
+
+.image1 {
+    width: 500px;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.info {
+    max-width: 800px;
+    margin: 10px;
+    text-align: center; /* to center the text under the images*/
+    font-size: large;
+    font-weight: bold;
+}
+.image2 {
+    width: 250px;
+    height: 300px;
+    border: 3px solid #3882f6;
+    border-radius: 8px;
+}
+
+.button-link {
+    padding: 8px 16px;
+    width: 90px;
+    background-color: #3882f6;
+    color: white;
+    border: none;
+    border-radius: 8px; /* to round corners of the button */
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button2 {
+    padding: 8px 16px;
+    width: 90px;
+    background-color: white;
+    color:#3882f6;
+    border: none;
+
+    border-radius: 8px; /* to round corners of the button */
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.welcome-message {
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+

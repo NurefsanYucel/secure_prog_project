@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <style>
+        #adminGreeting {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ff69b4; /* Hot pink */
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        animation: sparkle 2s infinite;
+        cursor: default;
+        }
+
+        /* Sparkle animation using keyframes */
+        @keyframes sparkle {
+        0%, 100% {
+            text-shadow:
+            0 0 5px #ff69b4,
+            0 0 10px #ff69b4,
+            0 0 20px #ff1493,
+            0 0 30px #ff1493,
+            0 0 40px #ff69b4,
+            0 0 50px #ff69b4,
+            0 0 60px #ff69b4;
+            color: #ff69b4;
+        }
+        50% {
+            text-shadow:
+            0 0 10px #fff,
+            0 0 20px #ff69b4,
+            0 0 30px #ff69b4,
+            0 0 40px #fff,
+            0 0 50px #ff1493,
+            0 0 60px #fff;
+            color: #fff;
+        }
+        }
+
+        /* Add a little twinkle star before and after */
+        #adminGreeting::before,
+        #adminGreeting::after {
+        content: "✨";
+        font-size: 2rem;
+        margin: 0 0.3em;
+        animation: twinkle 3s infinite;
+        }
+
+        #adminGreeting::after {
+        animation-delay: 1.5s;
+        }
+
+        @keyframes twinkle {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1 id="adminGreeting"></h1>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = JSON.parse(localStorage.getItem('user'));
+      const token = localStorage.getItem('token');
+
+      if (!user || !token) {
+        window.location.href = '/signin.html';
+        return;
+      }
+
+      if (user.role !== 'admin') {
+        window.location.href = '/dashboard.html';
+        return;
+      }
+
+      // Show greeting with admin's username
+      document.getElementById('adminGreeting').textContent = `Hello Admin ${user.username}`;
+    });
+  </script>
+</body>
+</html>
+
