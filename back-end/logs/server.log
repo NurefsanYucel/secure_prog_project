@@ -1,0 +1,70 @@
+[2025-06-13T12:34:47.954Z] [INFO] [User: 684c1ae7923414487551a131] Audit: signup
+[2025-06-13T12:43:03.265Z] [INFO] [User: 684c1cd77100b9878d3d33e0] Audit: signup
+[2025-06-13T12:43:14.628Z] [INFO] [User: 684c1cd77100b9878d3d33e0] Audit: failed_signin
+[2025-06-13T12:43:19.903Z] [INFO] [User: 684c1cd77100b9878d3d33e0] Audit: signin
+[2025-06-13T12:43:27.827Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:43:30.851Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:43:33.655Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:43:37.316Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:43:40.335Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:43:43.064Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:43:44.524Z] [INFO] Verified token for user: 684c1cd77100b9878d3d33e0
+[2025-06-13T12:50:34.251Z] [INFO] Audit: failed_signin
+[2025-06-13T12:52:25.587Z] [INFO] Audit: failed_signin
+[2025-06-13T12:54:29.663Z] [INFO] Audit: failed_signin
+[2025-06-13T12:54:47.563Z] [INFO] Audit: failed_signin
+[2025-06-13T12:54:48.655Z] [INFO] Audit: failed_signin
+[2025-06-13T12:57:15.411Z] [INFO] Audit: failed_signin
+[2025-06-13T12:59:32.037Z] [INFO] Audit: failed_signin
+[2025-06-13T12:59:33.009Z] [INFO] Audit: failed_signin
+[2025-06-13T13:01:10.219Z] [INFO] Audit: failed_signin
+[2025-06-13T13:01:11.193Z] [INFO] Audit: failed_signin
+[2025-06-13T13:10:46.689Z] [INFO] [User: 684c233c3e7db1551ab4e830] Audit: signin
+[2025-06-13T13:12:32.907Z] [INFO] [User: 684c23c0bca9b24f01622c8b] Audit: signup
+[2025-06-13T13:13:08.785Z] [INFO] [User: 684c23e4bca9b24f01622c90] Audit: signup
+[2025-06-13T13:14:26.244Z] [WARN] 401 - Invalid token
+[2025-06-13T13:14:55.421Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:14:55.422Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:16:51.507Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:16:51.507Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:17:42.053Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:17:42.053Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:17:42.890Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:17:42.890Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:17:46.470Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:17:46.470Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:19:12.038Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:19:12.039Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:19:12.251Z] [INFO] [User: 684c233c3e7db1551ab4e830] Audit: promote_user
+[2025-06-13T13:20:52.983Z] [INFO] [User: 684c25b47ed57f62e9a75a1f] Audit: signup
+[2025-06-13T13:21:20.521Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:21:20.521Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:22:19.804Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:22:19.804Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:22:19.980Z] [INFO] [User: 684c233c3e7db1551ab4e830] Audit: delete_user
+[2025-06-13T13:23:05.968Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:23:05.968Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:25:47.441Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:25:47.442Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:27:27.847Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:27:27.847Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:28:57.921Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:28:57.921Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T13:34:00.154Z] [INFO] [User: 684c28c77ed57f62e9a75a31] Audit: signup
+[2025-06-13T13:34:56.130Z] [INFO] Audit: failed_signin
+[2025-06-13T13:35:42.851Z] [INFO] [User: 684c28c77ed57f62e9a75a31] Audit: failed_signin
+[2025-06-13T13:36:14.377Z] [INFO] [User: 684c28c77ed57f62e9a75a31] Audit: signin
+[2025-06-13T13:39:16.585Z] [INFO] Verified token for user: 684c28c77ed57f62e9a75a31
+[2025-06-13T13:40:09.952Z] [INFO] Verified token for user: 684c28c77ed57f62e9a75a31
+[2025-06-13T13:40:13.760Z] [INFO] Verified token for user: 684c28c77ed57f62e9a75a31
+[2025-06-13T13:40:59.605Z] [INFO] Verified token for user: 684c28c77ed57f62e9a75a31
+[2025-06-13T13:41:04.935Z] [INFO] Verified token for user: 684c28c77ed57f62e9a75a31
+[2025-06-13T13:42:49.827Z] [INFO] [User: 684c233c3e7db1551ab4e830] Audit: signin
+[2025-06-13T15:03:07.442Z] [INFO] [User: 684c28c77ed57f62e9a75a31] Audit: signin
+[2025-06-13T15:03:26.903Z] [INFO] Verified token for user: 684c233c3e7db1551ab4e830
+[2025-06-13T15:03:26.904Z] [INFO] Admin access granted to user: 684c233c3e7db1551ab4e830
+[2025-06-13T15:04:48.074Z] [INFO] [User: 684c28c77ed57f62e9a75a31] Audit: signin
+[2025-06-13T15:05:28.555Z] [INFO] Verified token for user: 684c28c77ed57f62e9a75a31
+[2025-06-13T15:05:28.555Z] [WARN] 403 - Non-admin access attempt by user: 684c28c77ed57f62e9a75a31
+[2025-06-13T15:08:39.540Z] [WARN] 401 - Invalid token
+[2025-06-13T15:11:51.230Z] [INFO] [User: 684c28c77ed57f62e9a75a31] Audit: failed_signin
