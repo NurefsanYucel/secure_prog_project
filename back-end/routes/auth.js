@@ -8,8 +8,8 @@ const { body, validationResult } = require('express-validator');
 
 // POST /api/auth/signup
 router.post('/signup', [
-  body('email').isEmail().normalizeEmail(),
-  body('username').trim().escape(),
+  body('email').isEmail().normalizeEmail(), // normalizeEmail() for e-mail structure
+  body('username').trim().escape(), //escape() converts special characters to safe version
   body('password').isLength({ min: 8 }),
   
 ], async (req, res) => {

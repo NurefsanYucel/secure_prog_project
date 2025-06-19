@@ -1,4 +1,6 @@
 const express = require('express');
+const sanitize = require('sanitize-html');
+const rateLimit = require('express-rate-limit');
 const router = express.Router();
 const Creature = require('../models/Creature');
 const { verifyToken, isAdmin } = require('../middleware/auth');
@@ -43,23 +45,49 @@ router.get('/', async (req, res) => {
 });
 
 // Search creatures by name (any user with token)
-router.get('/search', async (req, res) => {
-  const query = req.query.query;
+// Helper function to escape regex special characters to prevent ReDoS
+function escapeRegex(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Rate limiter to prevent abuse (e.g. brute-force search or DoS)
+const searchLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute window
+  max: 20, // limit to 20 requests per IP per minute
+  message: 'Too many search requests, please try again later.'
+});
+
+// Route: Search for creatures by name or origin
+// Protection: Token required, rate limited
+router.get('/search', authenticate, searchLimiter, async (req, res) => {
+  const rawQuery = req.query.query || '';
+
+  // Sanitize the query to remove HTML and trim spaces
+  const query = sanitize(rawQuery).trim();
+
+  // Basic validation: reject empty, overly long, or dangerous inputs
+  if (!query || query.length > 50 || !/^[\w\s\-]+$/.test(query)) {
+    return res.status(400).json({ message: 'Invalid or missing search query' });
+  }
+
+  // Escape regex characters to avoid injection and ReDoS
+  const safeQuery = escapeRegex(query);
 
   try {
+    // Search using case-insensitive regex (safe version)
     const creatures = await Creature.find({
       $or: [
-        { name: new RegExp(query, 'i') },
-        { origin: new RegExp(query, 'i') }
+        { name: new RegExp(safeQuery, 'i') },
+        { origin: new RegExp(safeQuery, 'i') }
       ]
     });
 
+    // Return matching creatures
     res.json(creatures);
   } catch (err) {
     console.error('Search error:', err);
     res.status(500).json({ message: 'Server error during search' });
   }
 });
-
 
 module.exports = router;

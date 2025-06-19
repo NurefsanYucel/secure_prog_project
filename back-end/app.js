@@ -3,7 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const morgan = require('morgan');
-const helmet = require('helmet');
+const helmet = require('helmet'); //middleware for Node.js (used with Express) that helps secure your app by setting various HTTP headers automatically.
 
 const authRoutes = require('./routes/auth');
 const creatureRoutes = require('./routes/creatures');

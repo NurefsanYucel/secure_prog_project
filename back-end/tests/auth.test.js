@@ -10,13 +10,13 @@ jest.setTimeout(15000); // 15 seconds timeout for slow DB connections
 
 require('dotenv').config({ path: '.env.test' });
 
-const request = require('supertest');
+const request = require('supertest'); //simulate HTTP requests to Express app.
 const mongoose = require('mongoose');
 const app = require('../app');
 const User = require('../models/User');
 
 beforeAll(async () => {
-  await mongoose.connect(process.env.MONGO_URI_TEST);
+  await mongoose.connect(process.env.MONGO_URI_TEST); //connects to test db
 });
 
 afterEach(async () => {
