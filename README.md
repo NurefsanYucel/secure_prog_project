@@ -1,61 +1,67 @@
-# Express Creature API
-
-A RESTful API built with Express.js and MongoDB for managing mythical creatures. The project supports user authentication, role-based access control, detailed admin capabilities, logging, and unit testing.
+# secure_prog_project  
+A secure programming demo project showcasing best-practices in authentication, access control and system logging.
 
 ---
 
 ## Table of Contents
-
+- [About](#about)  
 - [Features](#features)  
-- [Tech Stack](#tech-stack)  
-- [Setup & Installation](#setup--installation)  
-- [Environment Variables](#environment-variables)  
-- [Running the Project](#running-the-project)  
-- [Testing](#testing)  
-- [Admin User](#admin-user)  
-- [Authentication Flow & Password Requirements](#authentication-flow--password-requirements)  
-- [User Roles & Permissions](#user-roles--permissions)  
-- [Logging](#logging)  
-- [Security Notes](#security-notes)  
+- [Security Highlights](#security-highlights)  
+- [Technologies](#technologies)  
 - [Project Structure](#project-structure)  
+- [Setup & Installation](#setup-installation)  
+- [License](#license)  
 
 ---
 
-## Features
+## About  
+This project demonstrates a secure backend (and optionally frontend) implementation for user management and role-based access. It is structured to allow for safe authentication flows, privileged operations, and system-level monitoring of key actions.  
 
-- **User Signup and Signin:**
-  - Email format validation.
-  - Password must be at least 8 characters and include lowercase, uppercase, number, and special character.
-  - Confirm password matching during signup.
-  - Passwords hashed with bcrypt and a secret pepper.
-- **JWT-based authentication** with tokens stored client-side.
-- **Role-Based Access Control:**
-  - **Admin users** can:
-    - Add, edit, and delete creatures in the system.
-    - View all registered users.
-    - Promote normal users to admin role.
-    - Delete users.
-    - View system logs.
-  - **Normal users** can:
-    - Search creatures in the system.
-    - Add creatures to their personal list.
-    - Remove creatures from their personal list.
-- **Logging:** All critical user actions (signup, signin, failed signin, admin actions) are logged with timestamps.
-- **Frontend:** Sign-in form with password visibility toggle and redirects based on user roles.
-- **Unit Testing:** Jest and Supertest used to test API endpoints.
+It is intended as a reference for how to **design** and **implement** secure programming patterns in a modern JS/Node environment.
 
 ---
 
-## Tech Stack
-
-- Node.js & Express.js
-- MongoDB & Mongoose
-- bcrypt for secure password hashing
-- JSON Web Token (JWT) for authentication
-- express-validator for request validation
-- Jest & Supertest for testing
-- dotenv for environment variables
+## Features  
+- User signup, sign-in, and role assignment (e.g., normal user vs. admin)  
+- Role-based access control: only certain roles can perform high-privilege actions  
+- Logging of critical user actions (sign-ups, log-ins, failed attempts, admin changes)  
+- Secure password handling and authentication token handling  
+- Clear separation of modules/components (e.g., controllers, services, validation)  
 
 ---
+
+## Security Highlights  
+This section calls out the main security-specific practices implemented in the project:
+
+- **Password hashing**: All stored passwords are hashed (and salted) using strong algorithms (e.g., bcrypt) rather than storing plaintext.  
+- **Token‐based authentication**: Authentication uses JSON Web Tokens (JWT) or equivalent — validating tokens on each request and enforcing minimal privileges.  
+- **Input validation & sanitization**: Incoming requests (signup, signin, data modifications) are validated to prevent injection or malformed data.  
+- **Role-based access control (RBAC)**: Users are assigned roles (normal users, admins) and each API endpoint checks the role before allowing the operation.  
+- **Logging & audit trails**: Key events (successful and failed logins, privilege changes, data deletion etc.) are logged with timestamps and user identifiers so that suspicious activity can be traced.  
+- **Environment configuration & secrets management**: Secrets (e.g., database credentials, JWT secret keys) are kept in environment variables and not committed to source control.  
+- **Least privilege principle**: Admin operations are separated and only executed if the user has an explicit admin role. Normal users cannot escalate privileges or perform deletion operations.  
+- **Secure dependencies & updates**: Care is taken to keep dependencies up to date and review for known vulnerabilities (using audit tools, scanning).  
+- **Error handling & information exposure**: Errors do not leak sensitive information (e.g., stack traces or database internals) to the client side, reducing information that an attacker could exploit.
+
+By following these practices, the project is structured to serve as a strong example of how to build secure server-side software in a JavaScript/Node context.
+
+---
+
+## Technologies  
+- **Node.js** – JavaScript runtime for server-side development  
+- **Express.js** – Web framework for routing and middleware  
+- **MongoDB & Mongoose** – NoSQL database and ODM for storing user data and logs  
+- **bcrypt** – For secure password hashing  
+- **JSON Web Token (JWT)** – For token-based authentication and session management  
+- **express-validator** (or similar) – For request input validation  
+- **dotenv** – For environment variable management  
+- **Jest & Supertest** – For unit and integration testing of APIs  
+- Others as required (e.g., logging library, rate-limiting/helmet middleware)  
+
+---
+
+## Project Structure  
+A high-level outline of the folder and file organisation:
+
 
 
